@@ -10,10 +10,10 @@ public class WordFrequencyGame {
             return sentence + " 1";
         } else {
             try {
-                String[] arr = sentence.split(SPACE_PATTERN);
+                String[] words = sentence.split(SPACE_PATTERN);
                 List<WordInfo> inputList = new ArrayList<>();
-                for (String s : arr) {
-                    WordInfo input = new WordInfo(s, 1);
+                for (String word : words) {
+                    WordInfo input = new WordInfo(word, 1);
                     inputList.add(input);
                 }
                 Map<String, List<WordInfo>> map = getListMap(inputList);
