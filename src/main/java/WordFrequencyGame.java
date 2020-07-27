@@ -3,7 +3,8 @@ import java.util.*;
 public class WordFrequencyGame {
     public static final String SPACE_PATTERN = "\\s+";
     public static final String DELIMITER = "\n";
-
+    public static final String EMPTY_SPACE = " ";
+    public static final String CALCULATE_ERROR = "calculate error";
     public String getResult(String sentence) {
         if (sentence.split(SPACE_PATTERN).length == 1) {
             return sentence + " 1";
@@ -25,12 +26,12 @@ public class WordFrequencyGame {
                 inputList.sort((w1, w2) -> w2.getWordCount() - w1.getWordCount());
                 StringJoiner joiner = new StringJoiner(DELIMITER);
                 for (WordInfo w : inputList) {
-                    String s = w.getValue() + " " + w.getWordCount();
+                    String s = w.getValue() + EMPTY_SPACE + w.getWordCount();
                     joiner.add(s);
                 }
                 return joiner.toString();
             } catch (Exception e) {
-                return "Calculate Error";
+                return CALCULATE_ERROR;
             }
         }
     }
