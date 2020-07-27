@@ -1,10 +1,10 @@
 import java.util.*;
 
 public class WordFrequencyGame {
-    public static final String SPACE_PATTERN = "\\s+";
-    public static final String DELIMITER = "\n";
-    public static final String EMPTY_SPACE = " ";
-    public static final String CALCULATE_ERROR = "calculate error";
+    private static final String SPACE_PATTERN = "\\s+";
+    private static final String DELIMITER = "\n";
+    private static final String EMPTY_SPACE = " ";
+    private static final String CALCULATE_ERROR = "calculate error";
 
     public String getResult(String sentence) {
         try {
